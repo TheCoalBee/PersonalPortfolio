@@ -7,19 +7,16 @@
     font-family:'Playfair Display', sans-serif;
 }
 
+#main {
+    padding:40px;
+}
+
 /* About Me */
 
 #about-me-container {
     display:flex;
     align-items: center;
-    padding:40px;
-    background: linear-gradient(
-        -20deg,
-        white 0%,
-        white 40%,
-        darkcyan 10%,
-        darkcyan 100%
-    );
+    margin-bottom:75px;
 }
 
 /* Portrait */
@@ -27,7 +24,7 @@
 #portrait-container {
     flex:1;
     background-color:blue;
-    aspect-ratio: 7/9;
+    aspect-ratio: 4/5;
     position:relative;
 }
 
@@ -59,6 +56,8 @@
 #description {
     font-family:'Roboto', sans-serif;
     color:dimgray;
+    line-height:20px;
+    font-size:12px;
 }
 
 #description-links-container {
@@ -66,4 +65,56 @@
     display:flex;
     gap:25px;
     font-size:26px;
+}
+
+
+/* Projects */
+#projects-title {
+    font-weight:normal;
+    margin-bottom:10px;
+}
+
+#projects-container {
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.project-container {
+    flex:1;
+    min-width:175px;
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.project-screenshot {
+    background-color:red;
+    aspect-ratio:5/4;
+}
+
+.project-description-container {
+    padding:5px 20px;
+    min-height:100px;
+}
+
+.project-title-container {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:10px;
+}
+.project-title {
+    font-weight:normal;
+    font-size:16px;
+}
+
+.project-description {
+    font-size:12px;
+    color:dimgray;
+}
+
+.project-links-container {
+    display:flex;
+    gap:10px;
+    align-items:center;
 }
