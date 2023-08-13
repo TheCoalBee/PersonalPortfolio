@@ -1,3 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    padding:0;
+    margin:0;
+    font-family:'Playfair Display', sans-serif;
+}
+
+/* About Me */
+
+#about-me-container {
+    display:flex;
+    align-items: center;
+    padding:40px;
+    background: linear-gradient(
+        -20deg,
+        white 0%,
+        white 40%,
+        darkcyan 10%,
+        darkcyan 100%
+    );
+}
+
+/* Portrait */
+
+#portrait-container {
+    flex:1;
+    background-color:blue;
+    aspect-ratio: 7/9;
+    position:relative;
+}
+
+#portrait-title {
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    font-size:36px;
+    color:white;
+}
+
+#portrait {
+
+}
+
+#description-container {
+    flex:1.25;
+    background-color: lightblue;
+    padding:20px 15px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+#description-title {
+    font-weight:normal;
+}
+
+#description {
+    font-family:'Roboto', sans-serif;
+    color:dimgray;
+}
+
+#description-links-container {
+    align-self:flex-end;
+    display:flex;
+    gap:25px;
+    font-size:26px;
+}
