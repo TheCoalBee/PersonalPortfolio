@@ -7,139 +7,472 @@
     font-family:'Playfair Display', sans-serif;
 }
 
-/* About Me */
+/* About Me -- mobile viewing */
 
-#about-me-container {
-    display:flex;
-    align-items: center;
-    margin-bottom:75px;
-    margin:40px;
+@media (max-width: 600px) {
+    #about-me-container {
+        display:flex;
+        gap:20px;
+        flex-direction: column;
+        align-items: center;
+        margin:20px;
+        margin-bottom:50px;
+    }
+
+    /* Portrait */
+    #portrait-container {
+        aspect-ratio: 2/3;
+        position:relative;
+        margin:10px;
+        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.5);
+    }
+
+    #portrait-title {
+        position:absolute;
+        width:100%;
+        text-align: center;
+        bottom:5%;
+        font-size:48px;
+        color:white;
+    }
+
+    #portrait {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    #description-container {
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        align-items:center;
+    }
+
+    #description-title, #projects-title, #contact-me-title {
+        text-align: center;
+        font-size:36px;
+        font-weight:normal;
+    }
+
+    #description {
+        font-family:'Roboto', sans-serif;
+        color:dimgray;
+        line-height:25px;
+        font-size:16px;
+    }
+
+    #description-links-container {
+        display:flex;
+        gap:20px;
+        font-size:26px;
+    }
+
+    /* Projects */
+    #my-work {
+        margin:20px;
+    }
+    #projects-title {
+        margin-bottom:10px;
+    }
+
+    #projects-container {
+        display:flex;
+        gap:25px;
+        flex-wrap:wrap;
+    }
+
+    .project-container {
+        flex:1;
+        min-width:175px;
+        display:flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.5);
+    }
+
+    .project-screenshot {
+        aspect-ratio:5/4;
+    }
+
+    .project-description-container {
+        padding:15px 20px;
+        min-height:100px;
+    }
+
+    .project-title-container {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:15px;
+    }
+    .project-title {
+        font-weight:normal;
+        font-size:20px;
+    }
+
+    .project-description {
+        font-size:16px;
+        font-family:'Roboto', sans-serif;
+        line-height:20px;
+        color:dimgray;
+    }
+
+    .project-links-container {
+        display:flex;
+        gap:15px;
+        align-items:center;
+    }
+
+    #contact-me {
+        display:flex;
+        flex-direction: column;
+        background-color:cadetblue;
+        color:white;
+    }
+
+    #contact-description-container {
+        padding:20px;
+        display:flex;
+        flex-direction: column;
+        gap:15px;
+    }
+
+    #contact-description-container p {
+        font-family:'Roboto', sans-serif;
+        line-height:25px;
+        font-size:16px;
+    }
+
+    #contact-links-container {
+        display:flex;
+        justify-content: center;
+        gap:15px;
+        font-size:32px;
+        margin:10px 0;
+    }
+
+    #contact-portrait-container {
+        flex:1;
+        aspect-ratio:2/3;
+    }
+    
+    #contact-me-portrait {
+        height:100%;
+        width:100%;
+        object-fit: cover;
+    }
 }
 
-/* Portrait */
 
-#portrait-container {
-    flex:1;
-    background-color:blue;
-    aspect-ratio: 4/5;
-    position:relative;
+
+
+@media (min-width: 600px) {
+    #about-me-container {
+        padding:50px;
+        background-color: cadetblue;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    /* Portrait */
+    #portrait-container {
+        aspect-ratio: 2/3;
+        position:relative;
+        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.5);
+    }
+    
+    #portrait-title {
+        position:absolute;
+        width:100%;
+        text-align: center;
+        bottom:5%;
+        font-size:56px;
+        color:white;
+    }
+    
+    #portrait {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    
+    #description-container {
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        padding:20px;
+        gap:20px;
+        align-items:center;
+    }
+    
+    #description-title, #projects-title, #contact-me-title {
+        text-align: left;
+        font-size:48px;
+        font-weight:normal;
+    }
+    
+    #description {
+        font-family:'Roboto', sans-serif;
+        color:dimgray;
+        line-height:33px;
+        font-size:22px;
+    }
+    
+    #description-links-container {
+        display:flex;
+        gap:30px;
+        font-size:32px;
+    }
+    
+    /* Projects */
+    #my-work {
+        margin:50px;
+    }
+    #projects-title {
+        margin-bottom:20px;
+    }
+    
+    #projects-container {
+        display:flex;
+        gap:25px;
+        flex-wrap:wrap;
+    }
+    
+    .project-container {
+        flex:1;
+        min-width:350px;
+        display:flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.5);
+    }
+    
+    .project-screenshot {
+        aspect-ratio:5/4;
+    }
+    
+    .project-description-container {
+        padding:15px 30px;
+        min-height:150px;
+    }
+    
+    .project-title-container {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:15px;
+    }
+    .project-title {
+        font-weight:normal;
+        font-size:32px;
+    }
+    
+    .project-description {
+        font-size:22px;
+        font-family:'Roboto', sans-serif;
+        line-height:30px;
+        color:dimgray;
+    }
+    
+    .project-links-container {
+        display:flex;
+        gap:20px;
+        align-items:center;
+        font-size:26px;
+    }
+    
+    #contact-me {
+        display:flex;
+        flex-direction: row;
+        background-color:cadetblue;
+        color:white;
+        padding:50px;
+    }
+    
+    #contact-description-container {
+        flex:1;
+        display:flex;
+        justify-content:center;
+        flex-direction: column;
+        gap:15px;
+    }
+    
+    #contact-description-container p {
+        font-family:'Roboto', sans-serif;
+        line-height:33px;
+        font-size:22px;
+    }
+    
+    #contact-links-container {
+        display:flex;
+        gap:30px;
+        font-size:32px;
+        margin:10px 0;
+        font-size:36px;
+    }
+
+    #contact-portrait-container {
+        flex:1;
+        aspect-ratio:4/5;
+    }
+    
+    #contact-me-portrait {
+        height:100%;
+        width:100%;
+        object-fit: cover;
+    }
 }
 
-#portrait-title {
-    position:absolute;
-    bottom:5px;
-    right:5px;
-    font-size:36px;
-    color:white;
-}
+@media (min-width: 1200px) {
+    #about-me-container {
+        padding:75px 100px;
+        background-color: cadetblue;
+        display:flex;
+        flex-direction: row;
+    }
+    
+    /* Portrait */
+    #portrait-container {
+        aspect-ratio: 7/8;
+        position:relative;
+        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.5);
+    }
+    
+    #portrait-title {
+        position:absolute;
+        width:100%;
+        text-align: center;
+        bottom:5%;
+        font-size:72px;
+        color:white;
+    }
+    
+    #portrait {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    
+    #description-container {
+        background-color: white;
+        display:flex;
+        flex-direction: column;
+        padding:30px 25px;
+        gap:30px;
+    }
+    
+    #description-title, #projects-title, #contact-me-title {
+        align-self:flex-start;
+        font-size:64px;
+        font-weight:normal;
+    }
+    
+    #description {
+        font-family:'Roboto', sans-serif;
+        color:dimgray;
+        line-height:45px;
+        font-size:28px;
+    }
+    
+    #description-links-container {
+        display:flex;
+        align-self:flex-end;
+        gap:50px;
+        font-size:48px;
+        margin-right:20px;
+    }
+    
+    /* Projects */
+    #my-work {
+        margin:100px;
+    }
+    #projects-title {
+        margin-bottom:20px;
+    }
+    
+    #projects-container {
+        display:flex;
+        gap:25px;
+        flex-wrap:wrap;
+    }
+    
+    .project-container {
+        flex:1;
+        min-width:500px;
+        display:flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.5);
+    }
+    
+    .project-screenshot {
+        aspect-ratio:5/4;
+    }
+    
+    .project-description-container {
+        padding:15px 30px;
+        min-height:200px;
+    }
+    
+    .project-title-container {
+        display:flex;
+        justify-content: space-between;
+        margin-bottom:15px;
+    }
+    .project-title {
+        font-weight:normal;
+        font-size:32px;
+    }
+    
+    .project-description {
+        font-size:22px;
+        font-family:'Roboto', sans-serif;
+        line-height:30px;
+        color:dimgray;
+    }
+    
+    .project-links-container {
+        display:flex;
+        gap:20px;
+        align-items:center;
+        font-size:26px;
+    }
+    
+    #contact-me {
+        display:flex;
+        flex-direction: row;
+        background-color:cadetblue;
+        color:white;
+        padding:100px;
+    }
+    
+    #contact-description-container {
+        flex:1;
+        display:flex;
+        justify-content:center;
+        flex-direction: column;
+        gap:15px;
+    }
+    
+    #contact-description-container p {
+        font-family:'Roboto', sans-serif;
+        line-height:33px;
+        font-size:26px;
+    }
+    
+    #contact-links-container {
+        display:flex;
+        gap:30px;
+        font-size:32px;
+        margin:10px 0;
+        font-size:36px;
+    }
 
-#portrait {
-
-}
-
-#description-container {
-    flex:1.25;
-    background-color: lightblue;
-    padding:20px 15px;
-    display:flex;
-    flex-direction: column;
-    gap:20px;
-}
-
-#description-title {
-    font-weight:normal;
-}
-
-#description {
-    font-family:'Roboto', sans-serif;
-    color:dimgray;
-    line-height:20px;
-    font-size:12px;
-}
-
-#description-links-container {
-    align-self:flex-end;
-    display:flex;
-    gap:25px;
-    font-size:26px;
-}
-
-
-/* Projects */
-#my-work {
-    padding:40px;
-}
-#projects-title {
-    font-weight:normal;
-    margin-bottom:10px;
-}
-
-#projects-container {
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.project-container {
-    flex:1;
-    min-width:175px;
-    display:flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-.project-screenshot {
-    background-color:red;
-    aspect-ratio:5/4;
-}
-
-.project-description-container {
-    padding:5px 20px;
-    min-height:100px;
-}
-
-.project-title-container {
-    display:flex;
-    justify-content: space-between;
-    margin-bottom:10px;
-}
-.project-title {
-    font-weight:normal;
-    font-size:16px;
-}
-
-.project-description {
-    font-size:12px;
-    color:dimgray;
-}
-
-.project-links-container {
-    display:flex;
-    gap:10px;
-    align-items:center;
-}
-
-
-#contact-me {
-    display:flex;
-    background-color:cadetblue;
-    padding:40px;
-    color:white;
-}
-
-#contact-description-container {
-    flex:1;
-    display:flex;
-    flex-direction: column;
-    gap:15px;
-
-}
-
-#contact-me-title {
-    font-weight:normal;
-}
-
-#contact-me-portrait {
-    flex:2;
-    background-color: red;
+    #contact-portrait-container {
+        flex:1;
+        aspect-ratio:5/3;
+    }
+    
+    #contact-me-portrait {
+        height:100%;
+        width:100%;
+        object-fit: cover;
+    }
 }
